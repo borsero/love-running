@@ -36,8 +36,28 @@ h1, h2 {
     letter-spacing: 4px;
 }
 
+/* Horizontal alignment */
+
+#menu,#logo {
+    line-height: 75px;
+}
+
 #menu li {
     float: right;
     list-style-type: none;
     margin-right: 30px;
+}
+
+
+#menu a {
+    text-decoration: none; /* In order to remove the underline that appears as default for hyperlinks */
+    color: inherit;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a; /* Visual clue, to let the users know what page they are currently on */
 }
