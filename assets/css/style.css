@@ -17,7 +17,8 @@ body {
 
 /* Heading and logo */
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -38,7 +39,8 @@ h1, h2 {
 
 /* Horizontal alignment */
 
-#menu,#logo {
+#menu,
+#logo {
     line-height: 75px;
 }
 
@@ -50,7 +52,8 @@ h1, h2 {
 
 
 #menu a {
-    text-decoration: none; /* In order to remove the underline that appears as default for hyperlinks */
+    text-decoration: none;
+    /* In order to remove the underline that appears as default for hyperlinks */
     color: inherit;
 }
 
@@ -59,5 +62,12 @@ h1, h2 {
 }
 
 .active {
-    border-bottom: 1px solid #3a3a3a; /* Visual clue, to let the users know what page they are currently on */
+    border-bottom: 1px solid #3a3a3a;
+    /* Visual clue, to let the users know what page they are currently on */
+}
+
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url('../images/hero-image.webp') no-repeat center center;
 }
