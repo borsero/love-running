@@ -66,20 +66,31 @@ h2 {
     /* Visual clue, to let the users know what page they are currently on */
 }
 
-/* Hero Image */
+/* Hero Image & Cover Text */
 
 #hero-outer {
     height: 600px;
     width: 100%;
-    overflow: hidden; /* clear the image below  the header and also ensure that when the image  
+    overflow: hidden;
+    /* clear the image below  the header and also ensure that when the image  
     is scaled up in size. The size increase  is hidden from view. And to do that we'll set  
     the overflow to "hidden". Overflow : hidden can  also be used as an alternative to clear : both. */
+
+    position: relative;
+    /* The parent of both the cover-text overlay  and the image is the hero-outer section.   
+So we need to specifically set its position  to relative so that the child containers  
+can set their absolute position  relative to it. */
+}
+
+#cover-text, #cover-text h2 {
+    color: white;
 }
 
 #hero-image {
     height: 600px;
     width: 100%;
-    background: url('../images/hero-image.webp') no-repeat center center; /* "no-repeat" value  
+    background: url('../images/hero-image.webp') no-repeat center center;
+    /* "no-repeat" value  
     to prevent the image being repeated in the  event of it being smaller than the window.  
     We then set the image horizontally and vertically  by specifying the "center center" values. */
 
@@ -87,6 +98,8 @@ h2 {
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
+    /* The image scales up beyond the 600px height set for the  section. The overflow : hidden masks off the  
+edges of the resized image resulting in the zoom  effect, which gives a nice subtle animation. */
 }
 
 /* Creates the level of zoom for hero image */
@@ -98,12 +111,39 @@ followed by an animation name of our own choosing.  In this case, we'll call the
 
 @keyframes hero-zoom {
     from {
-        transform: scale(1); /* Our animation will  use the scale transform to increase the image size.  
+        transform: scale(1);
+        /* Our animation will  use the scale transform to increase the image size.  
         And how we do that is we give a scale a value of  1 to set our image to 100% of its normal size. */
     }
-/* And the final state of the animation transforms the  scale of the image up to 1.1 which is 110% of the  
+
+    /* And the final state of the animation transforms the  scale of the image up to 1.1 which is 110% of the  
 original size - a 10% increase. Notice the shape  of the animation rule and the nested curly braces. */
     to {
         transform: scale(1.1);
     }
+}
+
+#cover-text {
+    font-size: 130%;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    width: 300px;
+    height: 200px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+
+    background-color: rgba(241, 109, 107, .7); /* We'll use rgba values so we can assign an opacity value as well.
+    We'll set the opacity to .7 */
+
+    /* Place our cover text at a fixed  position relative to its parent container. */
+
+    bottom: 30px;
+    right: 150px;
+
+    /* And we'll need to fix it  in place by setting its position to "absolute". */
+
+    position: absolute;
 }
