@@ -224,3 +224,21 @@ hr {
     height: 100%;
     border-radius: 50%;
 }
+
+/* Event times */
+
+
+/* The image is less than 300px in height so the  browser is filling the gap. You can also set the  
+repeat value in a separate property if you wish. This is what it looks like.
+You might guess that the property is called "background-repeat" and its value will be "no-repeat".
+Then we’ll set the background-size to “cover” so that the image will fill the allocated section dimensions when they are applied.
+We'll set the background-position  to “center” and the width to 100%.  
+Finally, we hide any potential image overflow. */
+#times {
+    background-image: url('../images/dublin-city.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow: hidden;
+}
