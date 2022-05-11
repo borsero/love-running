@@ -264,3 +264,25 @@ To make it work we will set the panels to float left so that they display horizo
 #times h2 {
     color: #fafafa;
 }
+
+/*  Footer */
+
+footer {
+    height: 150px;
+    /* Give a height of 150px to maintain  the structural balance across the site.   */
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #3a3a3a;
+}
