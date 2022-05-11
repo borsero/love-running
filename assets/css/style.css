@@ -334,6 +334,13 @@ We set the width for all the gallery images  to 100%. */
         padding: 0;
     }
 
+    #times > div {
+        width: 100%;
+        clear: both;
+        height: 150px;
+        padding: 0;
+    }
+
     hr {
         display: none;
     }
