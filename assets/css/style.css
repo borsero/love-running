@@ -286,3 +286,23 @@ footer {
     padding: 5%;
     color: #3a3a3a;
 }
+
+/* Gallery photos */
+
+/* Set clear to “both”.  
+We do this so that the photo section and  its contents display below the header.   */
+#photos {
+    clear: both;
+    /* we set the line height to zero in order to  remove any horizontal gaps between the images. */
+    line-height: 0;
+    column-count: 4;
+    /* Let’s get rid of the vertical gaps by setting the  column-gap to 0px. */
+    column-gap: 0;
+}
+
+/* The gaps between the images are gone, but the  image sizing is still not right. Some are too big for the column,
+some are too small. We'll fix this by  targeting the images within the photo section.  
+We set the width for all the gallery images  to 100%. */
+#photos > img {
+    width: 100%;
+}
