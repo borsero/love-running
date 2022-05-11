@@ -83,7 +83,8 @@ So we need to specifically set its position  to relative so that the child conta
 can set their absolute position  relative to it. */
 }
 
-#cover-text, #cover-text h2 {
+#cover-text,
+#cover-text h2 {
     color: white;
 }
 
@@ -136,7 +137,8 @@ original size - a 10% increase. Notice the shape  of the animation rule and the 
     padding-top: 40px;
     padding-left: 10px;
 
-    background-color: rgba(241, 109, 107, .7); /* We'll use rgba values so we can assign an opacity value as well.
+    background-color: rgba(241, 109, 107, .7);
+    /* We'll use rgba values so we can assign an opacity value as well.
     We'll set the opacity to .7 */
 
     /* Place our cover text at a fixed  position relative to its parent container. */
@@ -241,4 +243,24 @@ Finally, we hide any potential image overflow. */
     background-position: center;
     width: 100%;
     overflow: hidden;
+}
+
+#times div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    width: 20%;
+    /* We have 5 panels to represent 5 meetups.  
+That means each panel should take 20% of  the screen width to display across the page. */
+    /* We set the height of each panel to 300px.  Half the size of the sections above them.  
+To make it work we will set the panels to float left so that they display horizontally within the flow of the page. */
+    height: 300px;
+    float: left;
+    padding: 30px 0 0 10px;
+    text-align: center;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+#times h2 {
+    color: #fafafa;
 }
